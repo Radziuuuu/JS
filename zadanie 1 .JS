@@ -19,11 +19,14 @@ function oblicz()
     let liczbaB = parseInt(b);
 
     let wynik = liczbaA + liczbaB;
+    let roznica = liczbaA - liczbaB;
+    let iloczyn = liczbaA * liczbaB;
+    let iloraz = liczbaA / liczbaB;
     // return parseInt(int, num)
 
     //document.querySelector(klasa)
     
 
     let miejsceNaWyik = document.getElementById("odpowiedz");
-    miejsceNaWyik .innerHTML = wynik;
+    miejsceNaWyik .innerHTML =  "suma: " + wynik + " roznica: " + roznica + " iloczyn: " + iloczyn + "  iloraz: " + iloraz;
 }
