@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <label>Ile liczb ciągu fibonacciego?</label>
+    <input type="number" id="iloscliczb">
+    <button onclick="fib()">Oblicz</button>
+    <p id="WWA"></p>
+
+
+    <script>
+
+
+        function fib()
+        {
+
+
+        let a = 1;
+        let b = 1;
+        let ostatnia;
+        let wynik = "";
+        let iloscliczb = document.getElementById("iloscliczb").value;
+
+
+            for (let i = 0; i < iloscliczb; i++)
+                {
+                
+                    ostatnia = a + b;
+                    wynik += ostatnia + ", "
+                    a = b;
+                    b = ostatnia
+                }
+                document.getElementById("WWA").innerHTML = wynik;
+        }
+
+        
+        
+            
+    </script>
+
+
+</body>
+</html>

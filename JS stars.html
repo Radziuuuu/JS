@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <pre id="trojkat">
+   
+    </pre>
+
+        <script>
+
+            function rysuj()
+            {
+                let liczbapoziomow = document.getElementById("n").value;
+                let wynik = "";
+                let liczbaspacji = liczbapoziomow - 1;
+
+                for(let i = 0; i < liczbapoziomow; i++)
+                {
+                    
+
+                    for(let j = 0; j < liczbaspacji; j++)
+                    {
+                        wynik = wynik + " ";
+                    }
+                    liczbaspacji--;
+                     let liczbagwiazdek = i*2+1;
+
+                     for(let k = 0; k < liczbagwiazdek; k++)
+                    {
+                         wynik = wynik + "*";
+                    }
+
+                    wynik = wynik + "\n";
+                }
+
+                document.getElementById("trojkat").innerText = wynik;
+            }
+
+
+            function dorysuj()
+            {
+                let liczbapoziomow = document.getElementById("n").value;
+                let wynik = "";
+                let liczbaspacji = liczbapoziomow + 1;
+
+                for(let i = 0; i < liczbapoziomow; i++)
+                {
+                    
+
+                    for(let j = 0; j < liczbaspacji; j++)
+                    {
+                        wynik = wynik - " ";
+                    }
+                    liczbaspacji--;
+                     let liczbagwiazdek = i*2+1;
+
+                     for(let k = 0; k < liczbagwiazdek; k++)
+                    {
+                         wynik = wynik - "*";
+                    }
+
+                    wynik = wynik + "\n";
+                }
+
+                document.getElementById("trojkat").innerText = wynik;
+            }
+        </script>
+        <label>Ile poziomów</label>
+        <input type="number" id="n">
+        <button onclick="rysuj()">Rysuj</button>
+    </body>    
+</html>
