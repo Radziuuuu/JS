@@ -140,3 +140,18 @@ function iloraz()
 //     let miejsceNaWyik = document.getElementById("odpowiedz");
 //     miejsceNaWyik .innerHTML =  "wynik_potegi: " + wynik_potegi;
 // }
+
+    function potega()
+        {
+            let i = 0;
+            let wynik = 1;
+            let podstawa = document.getElementById("podstawa").value;
+            let wykladnik = document.getElementById("wykladnik").value;
+            while (i < wykladnik)
+            {
+                wynik = wynik * podstawa;
+                i++;
+
+            }
+            document.getElementById("WWA").innerHTML = wynik;
+        }
